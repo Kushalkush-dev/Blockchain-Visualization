@@ -84,8 +84,8 @@ class AnimatedBlockchain:
             self.canvas.create_rectangle(x, self.y, x+self.block_w, self.y+self.block_h, outline="#ffffff", width=2)
 
             # Block text
-            self.canvas.create_text(x + self.block_w/2, self.y + 20, text=f"Block {idx}", font=("Orbitron", 12, "bold"), fill="#ffffff")
-            self.canvas.create_text(x + self.block_w/2, self.y + 50, text=f"Data: {info}", font=("Arial", 10), fill="#ffffff")
+            self.canvas.create_text(x + self.block_w/2, self.y + 20, text=f"Block {idx}", font=("Orbitron", 15, "bold"), fill="#000000")
+            self.canvas.create_text(x + self.block_w/2, self.y + 50, text=f"Data: {info}", font=("Arial", 10), fill="#000000")
             self.canvas.create_text(x + self.block_w/2, self.y + 75, text=f"Nonce: {nonce}", font=("Arial", 10), fill="#ffffff")
             self.canvas.create_text(x + self.block_w/2, self.y + 105, text=f"Hash:\n{h[:20]}...", font=("Courier", 8), fill="#ffffff")
             self.canvas.create_text(x + self.block_w/2, self.y + 135, text=f"Prev Hash:\n{prev_h[:20]}...", font=("Courier", 8), fill="#ffffff")
@@ -93,7 +93,7 @@ class AnimatedBlockchain:
             self.blocks_coords.append((x, self.y, x+self.block_w, self.y+self.block_h))
 
         # Title
-        self.canvas.create_text(self.canvas_width/2, 40, text="🌌 Animated Sci-Fi Blockchain 🌌", font=("Orbitron", 18, "bold"), fill="#0ff6ff")
+        self.canvas.create_text(self.canvas_width/2, 40, text="🌌 Block Chain Visualization(Hash Start With - '000') 🌌", font=("Orbitron", 18, "bold"), fill="#0ff6ff")
 
     def animate_arrows(self):
         self.canvas.delete("arrow")
